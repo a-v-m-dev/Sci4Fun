@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sci4Fun</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!-- <link rel="stylesheet" href="css/w3pro.css">
+<link rel="stylesheet" href="css/w3-theme-black.css"> -->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/bottom_navbar.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+<script type="text/javascript">
+  function displayScore(){
+        document.getElementById("getScore1QFormativeW1").innerHTML = localStorage.getItem("getScore1QFormativeW1");
+        document.getElementById("getScore1QFormativeW2").innerHTML = localStorage.getItem("getScore1QFormativeW2");
+        document.getElementById("getScore1QFormativeW3").innerHTML = localStorage.getItem("getScore1QFormativeW3");
+        document.getElementById("getScore1QFormativeW4").innerHTML = localStorage.getItem("getScore1QFormativeW4");        
+}
+</script> 
+</head>
+<body onload="displayScore()" style="background-color: #85C3FF">
+<nav class="w3-sidebar w3-bar-block w3-card-4 w3-animate-left" id="mySidebar" CloseOnDocumentClick="true" style="width: 230px; margin-top: 90px;">
+<div class="w3-container w3-white">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large w3-hover-blue w3-xxxlarge">&times;</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <a href="index.html">
+      <img class="w3-square" src="img/Sci4Fun.png" alt="avatar" style="width:75%">
+    </a>
+  </div>
+</div>
+<a class="w3-bar-item w3-button w3-hover-blue" href="index.html">Home</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="quarter_view.html">Assessment</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="score_main_view.html">Score</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="student_profile.html">Student Profile</a>
+</nav>
+
+<header class="w3-bar w3-card-4" style="background-color: #0085FF;">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-text-white w3-hover-blue" onclick="openSidebar()">&#9776;</button>
+  <a href="index.html"><h1 class="w3-bar-item"><img src="img/Logo_Sci4Fun.png" style="width: 170px; height: auto;" /></h1></a>
+</header>
+
+<div class="w3-container" style="margin:5px 0px 0px 10px;">
+  <h1 class="w3-sans-serif"><b style="font-size: .8em; color: white; text-shadow: 2px 2px 5px black;">Score</b></h1>
+</div>
+
+<div class="w3-container" style="margin:0px 0px 0px 0px;">
+  <a href="">
+        <div class="w3-row w3-mobile w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #1434A4;">
+          <div class="w3-col s3">
+            <p class="w3-panel w3-margin w3-green w3-center w3-round-xlarge" style="width: 70px; height: 70px;"><i class="w3-margin-top fa fa-check-square" style='color: #E6E6FA; font-size: 40px;'></i></p>
+          </div>
+          <div class="w3-col s9">
+            <p class="w3-sans-serif" style="color: #ccccff; font-weight: bold; font-size: 21px; padding-left: 10px">Pre-Test</p>
+            <p class="w3-sans-serif" style="color: #ADD8E6; margin-top: -25px; padding-left: 10px">Score: <span id="getScore1Q"></span>/50</span></p>
+          </div>
+        </div>
+  </a>
+</div>
+
+<div class="w3-container" style="margin:10px 0px 0px 0px;">
+  <a href="">
+        <div class="w3-row w3-mobile w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #1434A4;">
+          <div class="w3-col s3">
+            <p class="w3-panel w3-margin w3-red w3-center w3-round-xlarge" style="width: 70px; height: 70px;"><i class="w3-margin-top fa fa-check-square" style="color: #E6E6FA; font-size: 40px;"></i></p>
+          </div>
+          <div class="w3-col s9">
+            <p class="w3-sans-serif" style="color: #ccccff; font-weight: bold; font-size: 21px; padding-left: 10px">Formative Test</p>
+            <p class="w3-sans-serif" style="color: #ADD8E6; margin-top: -20px; padding-left: 10px">
+              <span class="w3-badge w3-amber">1</span>
+              <span id="getScore1QFormativeW1"></span>/10</span>
+              <br />
+              <span class="w3-badge w3-amber w3-margin-top">2</span>
+              <span id="getScore1QFormativeW2"></span>/10</span>
+              <br />
+              <span class="w3-badge w3-amber w3-margin-top">3</span>
+              <span id="getScore1QFormativeW3"></span>/10</span>
+              <br />
+              <span class="w3-badge w3-amber w3-margin-top">4</span>
+              <span id="getScore1QFormativeW4"></span>/10</span>
+            </p>
+          </div>
+        </div>
+  </a>
+</div>
+
+<div class="w3-container" style="margin:10px 0px 0px 0px;">
+  <a href="">
+        <div class="w3-row w3-mobile w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #1434A4;">
+          <div class="w3-col s3">
+            <p class="w3-panel w3-margin w3-indigo w3-center w3-round-xlarge" style="width: 70px; height: 70px;"><i class="w3-margin-top fa fa-check-square" style='color: #E6E6FA; font-size: 40px;'></i></p>
+          </div>
+          <div class="w3-col s9">
+            <p class="w3-sans-serif" style="color: #ccccff; font-weight: bold; font-size: 21px; padding-left: 10px">Post-Test</p>
+            <p class="w3-sans-serif" style="color: #ADD8E6; margin-top: -25px; padding-left: 10px">Score: <span id="getScorePost3Q"></span>/50</span></p>
+          </div>
+        </div>
+  </a>
+</div>
+
+<div class="icon-bar">
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a> 
+  <a href="quarter_view.html"><i class="fa fa-book"></i></a>
+  <a href="score_main_view.html"><i class="fa fa-brain" style="font-size: 1.3em; color: #85C3FF;"></i></a> 
+  <a href="student_profile.html"><i class="fa fa-user"></i></a>
+</div>
+
+<script>
+closeSidebar();
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>

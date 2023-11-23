@@ -1,0 +1,36 @@
+body {margin:0;}
+
+.icon-bar {
+  width: 100%;
+  background-color: #0085FF;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+}
+
+/*Remove the blue background when pressing link blocks on mobile*/
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #0085FF;
+}
+
+.active {
+  background-color: #0085FF;
+}

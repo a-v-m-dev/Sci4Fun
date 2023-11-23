@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sci4Fun</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!-- <link rel="stylesheet" href="css/w3pro.css">
+<link rel="stylesheet" href="css/w3-theme-black.css"> -->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/bottom_navbar.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+</head>
+<body style="background-color: #85C3FF">
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" CloseOnDocumentClick="true" style="width:230px;">
+<div class="w3-container w3-black">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large w3-hover-black">&times;</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <a href="index.html">
+      <img class="w3-circle" src="img/dosann.png" alt="avatar" style="width:75%">
+    </a>
+  </div>
+</div>
+<a class="w3-bar-item w3-button" href="index.html">Home</a>
+<a class="w3-bar-item w3-button" href="courses_main_view.html">Courses</a>
+<a class="w3-bar-item w3-button" href="definition_of_terms_list_of_topics.html">Definition of Terms</a>
+<a class="w3-bar-item w3-button" href="analysis_report_view.html">Score</a>
+<a class="w3-bar-item w3-button" href="student_profile.html">Student Profile</a>
+</nav>
+
+<header class="w3-bar w3-card-4" style="background-color: #0085FF;">
+  <a href="quarter_view.html" class="w3-bar-item w3-xxxlarge"><i class="fa fa-chevron-left" style="font-size: 1.2em; color: white;"></i></a>
+  <a href="index.html"><h1 class="w3-bar-item"><img src="img/Logo_Sci4Fun.png" style="width: 170px; height: auto;" /></h1></a>
+</header>
+
+<div class="w3-container w3-disabled" style="margin:5px 0px 0px 0px;">
+  <a href="">
+    <div class="w3-section w3-padding-large w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #6082B6;">
+      <img src="img/1.png" class="w3-right w3-margin-top w3-animate-left" style="width:100px; height: 100px;">
+        <p class="w3-sans-serif"><b style="font-size: 2em; color: white; text-shadow: 2px 2px 5px black;">Pre-Test</b><br />
+        </p>
+      <button class="w3-button w3-margin-top w3-hover-black w3-round-xxlarge w3-hover-shadow" style="width:30%; background-color: #181818; color: white;">Open</button>
+    </div>
+  </a>
+</div>
+
+<div class="w3-container" style="margin:-15px 0px 0px 0px;">
+  <a href="1q_formative_week_view.html">
+    <div class="w3-section w3-padding-large w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #6082B6;">
+      <img src="img/2.png" class="w3-right w3-margin-top w3-animate-left" style="width:100px; height: 100px;">
+        <p class="w3-sans-serif"><b style="font-size: 2em; color: white; text-shadow: 2px 2px 5px black;">Formative Test</b><br />
+        </p>
+      <button class="w3-button w3-margin-top w3-hover-black w3-round-xxlarge w3-hover-shadow" style="width:30%; background-color: #181818; color: white;">Open</button>
+    </div>
+  </a>
+</div>
+
+<!-- !!! this -->
+<div class="w3-container w3-disabled" style="margin:-15px 0px 0px 0px;">
+  <a href="agri_fishery_q3_content.html">
+    <div class="w3-section w3-padding-large w3-card-2 w3-round-large w3-animate-zoom w3-hover-shadow" style="background-color: #6082B6;">
+      <img src="img/3.png" class="w3-right w3-margin-top w3-animate-left" style="width:100px; height: 100px;">
+        <p class="w3-sans-serif"><b style="font-size: 2em; color: white; text-shadow: 2px 2px 5px black;">Post-Test</b><br />
+        </p>
+      <button class="w3-button w3-margin-top w3-hover-black w3-round-xxlarge w3-hover-shadow" style="width:30%; background-color: #181818; color: white;">Open</button>
+    </div>
+  </a>
+</div>
+
+<div class="icon-bar">
+  <a class="active" href="index.html"><i class="fa fa-home"></i></a> 
+  <a href="quarter_view.html"><i class="fa fa-book" style="font-size: 1.3em; color: #85C3FF;"></i></a>
+  <a href="score_main_view.html"><i class="fa fa-brain"></i></a> 
+  <a href="student_profile.html"><i class="fa fa-user"></i></a>
+</div>
+
+<script>
+closeSidebar();
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>

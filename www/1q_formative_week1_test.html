@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sci4Fun</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!-- <link rel="stylesheet" href="css/w3pro.css">
+<link rel="stylesheet" href="css/w3-theme-black.css"> -->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/bottom_navbar.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+<style>
+input,
+textarea,
+button,
+select,
+label,
+span,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+ div#test{ padding:10px 25px 25px 25px; }
+.pointer {cursor: pointer;}
+/* The container for Radio Button */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: -5px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 13px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: midnightblue;
+}
+</style>
+<script type="text/javascript">
+  function preventBack() {window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+</head>
+<body style="background-color: #85C3FF">
+
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" CloseOnDocumentClick="true" style="width:230px;">
+<div class="w3-container w3-black">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">&times;</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <a href="index.html">
+      <img class="w3-circle" src="img/dosann.png" alt="avatar" style="width:75%">
+    </a>
+  </div>
+</div>
+<a class="w3-bar-item w3-button" href="index.html">Home</a>
+<a class="w3-bar-item w3-button" href="courses_main_view.html">Courses</a>
+<a class="w3-bar-item w3-button" href="#">Score</a>
+<a class="w3-bar-item w3-button" href="student_profile.html">Student Profile</a>
+</nav>
+
+<header class="w3-bar w3-card-4" style="background-color: #0085FF;">
+  <a href="1q_formative_week1_info.html" class="w3-bar-item w3-xxxlarge"><i class="fa fa-chevron-left" style="font-size: 1.2em; color: white;"></i></a>
+<h1 class="w3-bar-item"><img src="img/Logo_Sci4Fun.png" style="width: 170px; height: auto;" /></h1>
+</header>
+
+
+<div class="w3-container" style="margin:-5px 0px 0px 0px;">
+    <div class="w3-section w3-padding-large w3-card-2 w3-round-large w3-animate-left w3-hover-shadow" style="background-color: darkblue;">
+      <img src="img/exam.png" class="w3-right w3-animate-left" style="width:80px; height: 80px;">
+        <p class="w3-sans-serif"><b style="font-size: 1.3em; color: white;">Formative Test</b><br />
+          <span style="font-size: .8em; color: white; font-style: italic;">Week 1</span>
+        </p>
+    </div>
+</div>
+
+<div>
+  <span class="w3-section w3-animate-input" type="text" style="width:100%; font-size: 20px; text-align: center;" id="getScore1QFormativeW1" name="score" readonly>
+ <h2 id="test_status" style="margin-top: -10px;"></h2>
+ <h3 id="timeleft"></h3>
+</div>
+<div id="test"></div>
+<script src="js/1q_formative_week1_test_result.js"></script>
+</div>
+<script>
+closeSidebar();
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+var myVar;
+function startTimer() {
+  myVar = setInterval(function(){myTimer()},1000);
+  timelimit = maxtimelimit;
+}
+
+function myTimer() {
+  if (timelimit > 0) {
+    curmin=Math.floor(timelimit/60);
+    cursec=timelimit%60;
+    if (curmin!=0) { curtime=curmin+" minutes and "+cursec+" seconds left"; }
+              else { curtime=cursec+""; }
+    $_('timeleft').innerHTML = "<div class='w3-container w3-center w3-mobile w3-animate-zoom'><span class='w3-tag w3-padding w3-animate-opacity w3-medium w3-center w3-round-large w3-red' style='color: white; font-weight: bold; '>" + curtime + "</span></div>";
+  } else {
+    $_('timeleft').innerHTML = "<div class='w3-container w3-center w3-mobile w3-animate-zoom'><span class='w3-tag w3-padding w3-round-large w3-red w3-center w3-animate-fading'>Out of Time</span></div>";
+    setTimeout("timeover()", 3000); //3sec
+
+    clearInterval(myVar);
+  }
+  timelimit--;
+}
+
+function timeover() {
+  renderResults(correct);
+  setTimeout("toAnalysisReport()", 3000); //4sec
+}
+
+var pos = 0, posn, choice, correct = 0, rscore = 0;
+var maxtimelimit = 59, timelimit = maxtimelimit;  // n seconds per question
+
+var questions = [
+    [ "An object should float in a liquid if it is &#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;", "heavy", "lighter than metal", "shaped like a ball", "less dense than the liquid", "D" ],
+    [ "A tiny piece of sand is very light but sinks in water. This is  because &#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;", "sand is heavy", "sand is a solid", "sand is denser than water", "there is more water than sand", "C" ],
+    [ "A candle floats in water but sinks in alcohol. This is because &#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;", "water is lighter than alcohol", "water is heavier than alcohol", "the candle is lighter in alcohol", "water and alcohol are both liquids", "A" ],
+    [ "A carrot floats in salt water but sinks in fresh water. This is because &#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;&#x5F;", "the carrot is lighter than saltwater", "fresh water is heavier than saltwater", "saltwater is heavier than fresh water", "a large piece of carrot has a different density", "A" ],
+    [ "Which of the following materials will float in water?", "coin", "stone", "balloon", "iron nail", "C" ],
+    [ "Choose the letter A for ABSORBENT if the materials Absorb Water and NA for NON-ABSORBENT, if the materials do not Absorb Water: RUBBER BALL &#9918;", "A", "NA", "", "", "B" ],
+    [ "Choose the letter A for ABSORBENT if the materials Absorb Water and NA for NON-ABSORBENT, if the materials do not Absorb Water: PLASTIC BAG &#128717;", "A", "NA", "", "", "B" ],
+    [ "Choose the letter A for ABSORBENT if the materials Absorb Water and NA for NON-ABSORBENT, if the materials do not Absorb Water: BLANKET", "A", "NA", "", "", "A" ],
+    [ "Choose the letter A for ABSORBENT if the materials Absorb Water and NA for NON-ABSORBENT, if the materials do not Absorb Water: PAPER &#128196;", "A", "NA", "", "", "A" ],
+    [ "Choose the letter A for ABSORBENT if the materials Absorb Water and NA for NON-ABSORBENT, if the materials do not Absorb Water: PLASTIC BOTTLE &#x1F37C;", "A", "NA", "", "", "B" ]
+];
+
+// FORMAT [ "question", "ch1", "ch2", "ch3", "ch4", "A" ],
+
+var questionOrder = [];
+function setQuestionOrder() {
+  questionOrder.length = 0;
+  for (var i=0; i<questions.length; i++) { questionOrder.push(i); }
+  questionOrder.sort(randOrd);   // alert(questionOrder);  // shuffle display order
+  pos = 0;  posn = questionOrder[pos];
+}
+
+function $_(IDS) { return document.getElementById(IDS); }
+function randOrd() { return (Math.round(Math.random())-0.5); }
+
+function renderQuestion() {
+  var test = $_("test");
+  $_("test_status").innerHTML = "<div class='w3-panel w3-margin w3-text-white w3-round-medium w3-animate-left w3-border w3-border-indigo w3-topbar w3-bottombar w3-leftbar w3-rightbar' style='font-size: .7em; background-color: darkblue;'>Question "+(pos+1)+" of "+questions.length;
+  if (rscore != 0) { $_("test_status").innerHTML += '<span class="w3-panel w3-left w3-animate-fading" style="margin-top: -10px; color: darkblue; font-size: 15px;">Currently: '+(correct/rscore*100).toFixed(0)+'% Correct</span></div>'; }
+  var question = questions[posn][0];
+  var chA = questions[posn][1];
+  var chB = questions[posn][2];
+  var chC = questions[posn][3];
+  var chD = questions[posn][4];
+
+
+  test.innerHTML = "<p class='w3-text-white' style='margin-top: 0px; font-weight: bold'>"+question+"</p>";
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='A'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chA+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='B'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chB+"</span><span class='checkmark'style='background-color: #2C2CFF'></span></label><br>";
+
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='C'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chC+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='D'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chD+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+
+  test.innerHTML += "<button class='w3-btn w3-round-xxlarge w3-hover-shadow w3-hover-black w3-text-white w3-hover-text-white w3-animate-left' style='margin-top: 20px; background-color: blue; width: 100px;' onclick='checkAnswer()'>Next</button>";
+
+  timelimit = maxtimelimit;
+  clearInterval(myVar);
+  startTimer();
+}
+
+function myFunction() {
+if (window.confirm('Are you sure you want to leave Week 1 - Formative-Test?'))
+ {
+   window.location.href = '1q_formative_week1_info.html';
+ }
+
+ else {
+  window.location.href = '1q_formative_week1_test.html';
+ }
+}
+</script>
+</body>
+</html>

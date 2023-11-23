@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sci4Fun</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<!-- <link rel="stylesheet" href="css/w3pro.css">
+<link rel="stylesheet" href="css/w3-theme-black.css"> -->
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/bottom_navbar.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+<style type="text/css">
+  #user{
+    width:70%;
+    -moz-box-shadow: 0px 6px 5px #85C3FF;
+    -webkit-box-shadow: 0px 6px 5px #85C3FF;
+    box-shadow: 0px 6px 5px #85C3FF;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+  }
+</style>
+<script type="text/javascript">
+  function display(){
+        document.getElementById("display_name").innerHTML = localStorage.getItem("name");
+        document.getElementById("display_grade").innerHTML = localStorage.getItem("grade");
+}
+</script>
+</head>
+<body onload="display()" style="background-color: #85C3FF">
+
+<nav class="w3-sidebar w3-bar-block w3-card-4 w3-animate-left" id="mySidebar" CloseOnDocumentClick="true" style="width: 230px; margin-top: 90px; background-color: #FAF9F6;">
+<div class="w3-container" style="background-color: #FAF9F6;">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large w3-hover-blue w3-xxxlarge">&times;</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <a href="index.html">
+      <img class="w3-square" src="img/Sci4Fun.png" alt="avatar" style="width:75%">
+    </a>
+  </div>
+</div>
+<a class="w3-bar-item w3-button w3-hover-blue" href="index.html">Home</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="quarter_view.html">Assessment</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="score_main_view.html">Score</a>
+<a class="w3-bar-item w3-button w3-hover-blue" href="student_profile.html">Student Profile</a>
+</nav>
+
+<header class="w3-bar w3-card-4" style="background-color: #0085FF;">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-text-white w3-hover-blue" onclick="openSidebar()">&#9776;</button>
+  <a href="index.html"><h1 class="w3-bar-item"><img src="img/Logo_Sci4Fun.png" style="width: 170px; height: auto;" /></h1></a>
+</header>
+
+<div class="w3-container" style="margin:5px 0px 0px 10px;">
+  <h1 class="w3-sans-serif"><b style="font-size: .8em; color: white; text-shadow: 2px 2px 5px black;">Student Profile</b></h1>
+</div>
+
+<div class="w3-container w3-animate-zoom" style="margin:10px 0px 100px 0px;" align="center">
+    <div class="w3-card-2 w3-round-large w3-padding-16 w3-hover-shadow" style="width:100%; background-color: #1434A4;">
+
+      <div class="w3-dropdown-hover w3-right" style="margin-top: -10px; -webkit-tap-highlight-color: rgba(0,0,0,0);">
+        <button class="w3-button w3-hover-blue" style="background-color: #1434A4;"><i class="fa fa-ellipsis-v" style="color: whitesmoke;"></i></button>
+        <div class="w3-dropdown-content w3-bar-block" style="right:0; margin-top:-37px; margin-right: 30px;">
+          <a href="student_profile_update.html" class="w3-bar-item w3-card-4 w3-animate-zoom">Update</a>
+        </div>
+      </div>
+
+      <div class="w3-container w3-center">
+        <img id="user" src="img/user.png" alt="Avatar">
+          <h1 style="color: white; font-size: 40px; text-shadow: 2px 2px 5px blue; margin-top:5px" id="display_name"></h1>
+            <div class="w3-section">
+              <button class="w3-button w3-card w3-padding-small w3-deep-orange w3-round w3-hover-red" style="margin-top:-30px">Student Name</button>
+            </div>
+
+          <h1 style="color: white; font-size: 20px; text-shadow: 2px 2px 5px blue; margin-top:-10px" id="display_grade"></h1>
+            <div class="w3-section">
+              <button class="w3-button w3-card w3-padding-small w3-green w3-hover-green w3-round" style="margin-top:-20px">Grade / Section</button>
+            </div>
+      </div>
+    </div>
+</div>
+
+<div class="icon-bar">
+  <a href="index.html"><i class="fa fa-home"></i></a> 
+  <a href="quarter_view.html"><i class="fa fa-book"></i></a> 
+  <a href="score_main_view.html"><i class="fa fa-brain"></i></a>
+  <a class="active" href="student_profile.html"><i class="fa fa-user" style="font-size: 1.3em; color: #85C3FF;"></i></a>
+</div>
+
+<script>
+closeSidebar();
+function openSidebar() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
