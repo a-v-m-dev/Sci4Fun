@@ -116,11 +116,11 @@ a {
 </header>
 
 
-<div class="w3-container" style="margin:-5px 0px 0px 0px;">
-    <div class="w3-section w3-padding-large w3-card-2 w3-round-large w3-animate-left w3-hover-shadow" style="background-color: darkblue;">
-      <img src="img/exam.png" class="w3-right w3-animate-left" style="width:80px; height: 80px;">
-        <p class="w3-sans-serif"><b style="font-size: 1.3em; color: white;">Formative Test</b><br />
-          <span style="font-size: .8em; color: white; font-style: italic;">Week 3</span>
+<div class="w3-container" style="margin:-5px 0px -25px 0px;">
+    <div class="w3-section w3-padding w3-card-2 w3-round-large w3-animate-left w3-hover-shadow" style="background-color: darkblue;">
+      <img src="img/exam.png" class="w3-right w3-animate-left" style="width: 55px; height: 55px;">
+        <p class="w3-sans-serif"><b style="font-size: 1em; color: white;">Formative Test</b><br />
+          <span style="font-size: .8em; color: white; font-style: italic;">Lesson 3</span>
         </p>
     </div>
 </div>
@@ -210,14 +210,14 @@ function renderQuestion() {
   var chD = questions[posn][4];
 
 
-  test.innerHTML = "<p class='w3-text-white' style='margin-top: 0px; font-weight: bold'>"+question+"</p>";
-  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='A'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chA+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+  test.innerHTML = "<p class='w3-text-white' style='margin-top: 0px; font-size: .8em; font-weight: bold'>"+question+"</p>";
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='A'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: .6em;'>"+chA+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
 
-  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='B'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chB+"</span><span class='checkmark'style='background-color: #2C2CFF'></span></label><br>";
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='B'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: .6em;'>"+chB+"</span><span class='checkmark'style='background-color: #2C2CFF'></span></label><br>";
 
-  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='C'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chC+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='C'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: .6em;'>"+chC+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
 
-  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='D'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: 13px;'>"+chD+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
+  test.innerHTML += "<label class='container w3-mobile'><input type='radio' name='choices' value='D'><span class='w3-sans-serif w3-margin' style='color: black; font-weight: bold; font-size: .6em;'>"+chD+"</span><span class='checkmark' style='background-color: #2C2CFF'></span></label><br>";
 
   test.innerHTML += "<button class='w3-btn w3-round-xxlarge w3-hover-shadow w3-hover-black w3-text-white w3-hover-text-white w3-animate-left' style='margin-top: 20px; background-color: blue; width: 100px;' onclick='checkAnswer()'>Next</button>";
 
@@ -227,7 +227,7 @@ function renderQuestion() {
 }
 
 function myFunction() {
-if (window.confirm('Are you sure you want to leave Week 3 - Formative-Test?'))
+if (window.confirm('Are you sure you want to leave Lesson 3 - Formative-Test?'))
  {
    window.location.href = '1q_formative_week3_info.html';
  }
